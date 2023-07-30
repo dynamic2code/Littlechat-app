@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Vue.js App</title>
+  <!-- Add Vue.js via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <style>
+    .button{
+        position: relative;
+        background-color: black;
+        color: white;
+        border: none; 
+        padding: 10px 20px; 
+        margin: 1%; 
+        cursor: pointer; 
+        left: 1%;
+        top: 1%;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Your Vue.js template and bindings will go here -->
+    <h1>{{ message }}</h1>
+
+    <div class="center">
+      <center><h1>{{ number }}</h1></center>
+      <center>
+        <!-- Use @click directive to bind the button click events to the methods -->
+        <button class="button" @click="add">add</button>
+      </center>
+      <center>
+        <!-- Use @click directive to bind the button click events to the methods -->
+        <button class="button" @click="minus">minus</button>
+      </center>
+    </div>
+  </div>
+
+  <!-- Your custom JavaScript code that uses Vue.js goes here -->
+  <script>
+    // Your Vue.js application code
+    new Vue({
+      el: "#app",
+      data: {
+        message: "Hello, Vue.js!",
+        number: 0 // Initialize the number data property with 0
+      },
+      methods: {
+        add() {
+          this.number += 1; // Increment the number by 1 when the "add" button is clicked
+        },
+        minus() {
+          this.number -= 1; // Decrement the number by 1 when the "minus" button is clicked
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
