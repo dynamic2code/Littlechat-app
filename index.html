@@ -65,18 +65,14 @@
     <div class="add" id="add">
       <form action="">
         <input type="text" name="" id="messageInput" placeholder="Write your message here">
+        <input type="hidden" name="">
       </form>
       <div class="center">
-        <p>add to add the level of urgency</p>
-        <center><h1>{{ number }}</h1></center>
-        <center>
           <!-- Use @click directive to bind the button click events to the methods -->
           <button class="button" @click="add">add</button>
-        </center>
-        <center>
           <!-- Use @click directive to bind the button click events to the methods -->
           <button class="button" @click="minus">minus</button>
-        </center>
+        <center><h1> urgency level: {{ number }}%</h1></center>
       </div>
     </div>
   </div>
