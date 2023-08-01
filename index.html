@@ -14,19 +14,17 @@
     .container {
       height: 100vh;
     }
-
     .message_div {
-      
       background-color: #302f2f;
-      padding: 20px;
-      height: 100%;
+      /* padding: 20px; */
+      height: 90%;
     }
 
     .add {
       background-color: #2F2F2F;
       position: absolute;
       width: 100%;
-      top: 90%;
+      /* top: 90%; */
       /* left: 20%;
       right: 20%; */
       bottom: 0%;
@@ -34,7 +32,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border-radius: 20px;
+      /* border-radius: 20px; */
     }
     .message{
       width: 50%;
@@ -74,13 +72,14 @@
   <div class="container">
     <div class="message_div">
       <div class="message">
-        <p></p>
+        <p>{{ messageContent }}</p>
       </div>
     </div>
     <div class="add" id="add">
       <form action="" class="form">
         <h3> urgency level: {{ number }}%</h3>
-        <input type="text" name="" id="messageInput" placeholder="Write your message here">
+        <!-- <input type="text" name="" id="messageInput" placeholder="Write your message here"> -->
+        <input type="text" id="messageInput" v-model="messageContent" placeholder="Write your message here" @input="updateMessageContent">
         <input type="hidden" name="">
       </form>
       <div class="button-container">
@@ -109,6 +108,17 @@
         }
       }
     });
+    new Vue({
+    el: '#app',
+    data: {
+      messageContent: '' // Initialize an empty string for the message content
+    },
+    methods: {
+      updateMessageContent(event) {
+        this.messageContent = event.target.value; // Update the messageContent data property when the input changes
+      }
+    }
+  });
   </script>
 </body>
 </html>
