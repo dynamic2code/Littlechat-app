@@ -13,17 +13,29 @@
 
     .container {
       height: 100vh;
+      display: flex;
+    }
+    .contact_list {
+      flex: 0.5;
+      background-color: #59C1D9;
+    }
+
+    .message_and_add {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column;
     }
     .message_div {
-      background-color: #302f2f;
-      /* padding: 20px; */
+      background-color:#E9F0F2;
+      padding: 20px; 
       height: 90%;
     }
 
     .add {
-      background-color: #2F2F2F;
+      background-color:#FEFFFE;
+      
       position: absolute;
-      width: 100%;
+      width: 75%;
       /* top: 90%; */
       /* left: 20%;
       right: 20%; */
@@ -70,21 +82,40 @@
 </head>
 <body>
   <div class="container">
-    <div class="message_div">
-      <div class="message">
-        <p>{{ messageContent }}</p>
+
+    <div class="contact_list">
+      <div class="contact">
+        <div class="profile">
+          <img src="" alt="">
+          <span>profile comes here</span>
+        </div>
+        <img src="" alt="">
+        <div class="name_and_message">
+          <span>name</span>
+          <div class="message_preview">
+            <p>Hello there how have you been</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="add" id="add">
-      <form action="" class="form">
-        <h3> urgency level: {{ number }}%</h3>
-        <!-- <input type="text" name="" id="messageInput" placeholder="Write your message here"> -->
-        <input type="text" id="messageInput" v-model="messageContent" placeholder="Write your message here" @input="updateMessageContent">
-        <input type="hidden" name="">
-      </form>
-      <div class="button-container">
-        <button class="button" @click="add">add</button>
-        <button class="button" @click="minus">minus</button>
+
+    <div  class="message_and_add">
+      <div class="message_div">
+        <div class="message">
+          <p>{{ messageContent }}</p>
+        </div>
+      </div>
+      <div class="add" id="add">
+        <form action="" class="form">
+          <h3> urgency level: {{ number }}%</h3>
+          <!-- <input type="text" name="" id="messageInput" placeholder="Write your message here"> -->
+          <input type="text" id="messageInput" v-model="messageContent" placeholder="Write your message here" @input="updateMessageContent">
+          <input type="hidden" name="">
+        </form>
+        <div class="button-container">
+          <button class="button" @click="add">add</button>
+          <button class="button" @click="minus">minus</button>
+        </div>
       </div>
     </div>
   </div>
