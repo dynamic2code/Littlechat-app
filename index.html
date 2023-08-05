@@ -51,10 +51,12 @@
       /* border-radius: 20px; */
     }
     .message{
-      width: 50%;
+      display: inline-block;
+      /* width: auto; */
       border-radius: 20px; 
       background-color: blue;
       padding: 1%;
+    
     }
     .button-container {
         display: flex; /* Use Flexbox */
@@ -223,7 +225,7 @@
     <div  class="message_and_add">
       <div class="message_div">
         <div class="message">
-          <p>{{ messageContent }}</p>
+          <p style="margin: 1%;">the message comes here</p>
         </div>
       </div>
       <div class="add" id="add">
