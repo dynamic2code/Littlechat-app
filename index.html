@@ -20,8 +20,8 @@
     .contact_list {
       flex: 0.5;
       background-color: #59C1D9;
-      max-width: 25%;
-      min-width: 20;
+      /* min-width: 100px; */
+      min-width: 305px;
     }
 
     .message_and_add {
@@ -112,6 +112,7 @@
       width: 80%;
       border-radius: 20px;
       padding: 1%;
+      margin-left: 9%;
     }
     button{
       border: none;
@@ -125,12 +126,25 @@
       color: white;
       padding: 1%;
     }
+    .favorites{
+      margin-left: 2%;
+    }
+    .resent{
+      margin-left: 2%;
+    }
     .resent_contact{
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 10px;
     }
+    hr{
+      /* Set the color to black */
+      border-color: black;
+      height: 0.01px;
+      border-style: solid;
+    }
+    
 
   </style>
 </head>
@@ -175,10 +189,21 @@
               <img class="image"  src="/home/grrhrwh/Documents/GitHub/Vue_demo_app/Get Your Glow On With These 7 New Lightweight Foundations.jpeg" alt="">
             </div>
           </button>
+          <button>
+            <div class="img">
+              <img class="image"  src="/home/grrhrwh/Documents/GitHub/Vue_demo_app/Get Your Glow On With These 7 New Lightweight Foundations.jpeg" alt="">
+            </div>
+          </button>
+          <button>
+            <div class="img">
+              <img class="image"  src="/home/grrhrwh/Documents/GitHub/Vue_demo_app/Get Your Glow On With These 7 New Lightweight Foundations.jpeg" alt="">
+            </div>
+          </button>
         </div>
         <br>
+        <hr>
         <div class="resent">
-
+          <span style="font-weight: 600;" >Resent messages</span>
           <div class="resent_contact">
             <div class="img">
               <img class="image" src="/home/grrhrwh/Documents/GitHub/Vue_demo_app/Get Your Glow On With These 7 New Lightweight Foundations.jpeg" alt="">
