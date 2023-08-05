@@ -14,10 +14,14 @@
     .container {
       height: 100vh;
       display: flex;
+      color: white;
+      font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
     }
     .contact_list {
       flex: 0.5;
       background-color: #59C1D9;
+      max-width: 25%;
+      min-width: 20;
     }
 
     .message_and_add {
@@ -77,6 +81,56 @@
       border: 1px solid #ccc;
       font-size: 16px;
     }
+    .img{
+      display: block;
+      position: relative;
+      background-color: bisque;
+      width: 9vh;
+      height: 9vh;
+      border-radius: 50%;
+    }
+    .image{
+      object-fit: cover;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .icons{
+      width: 20px;
+      height: 20px;
+    }
+    .search{
+      background-color: #2E9AC1;
+      height: 10%;
+      width: 80%;
+      border-radius: 20px;
+      padding: 1%;
+    }
+    button{
+      border: none;
+
+      /* Remove default button background */
+      background-color: transparent;
+    }
+    input[type="search"] {
+      border: none;
+      background-color: transparent;
+      color: white;
+      padding: 1%;
+    }
+    .resent_contact{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+    }
 
   </style>
 </head>
@@ -85,17 +139,59 @@
 
     <div class="contact_list">
       <div class="contact">
+
         <div class="profile">
-          <img src="" alt="">
-          <span>profile comes here</span>
-        </div>
-        <img src="" alt="">
-        <div class="name_and_message">
-          <span>name</span>
-          <div class="message_preview">
-            <p>Hello there how have you been</p>
+          <div class="img"> 
+            <img class="image" src="/home/grrhrwh/Documents/GitHub/Vue_demo_app/Get Your Glow On With These 7 New Lightweight Foundations.jpeg" alt="">
+          </div>
+          <div> 
+            <span style="font-weight: 600;">john smith</span><br>
+            <span > get the money</span>
+          </div>
+
+          <div class="options">
+            <button> 
+              <img class="icons" src="option.png" alt="options">
+            </button>
           </div>
         </div>
+
+        <div class="search">
+          <button> 
+            <img class="icons" src="magnifying-glass.png" alt="search">
+          </button>
+          <input type="search" name="" id="" placeholder="search for a contact">
+          <button>
+            <img  class="icons" src="microphone.png" alt="mick">
+          </button>
+        </div>
+
+        
+        <br>
+        <div class="favorites">
+          <span style="font-weight: 600;">favorites</span> <br>
+          <button>
+            <div class="img">
+              <img class="image"  src="/home/grrhrwh/Documents/GitHub/Vue_demo_app/Get Your Glow On With These 7 New Lightweight Foundations.jpeg" alt="">
+            </div>
+          </button>
+        </div>
+        <br>
+        <div class="resent">
+
+          <div class="resent_contact">
+            <div class="img">
+              <img class="image" src="/home/grrhrwh/Documents/GitHub/Vue_demo_app/Get Your Glow On With These 7 New Lightweight Foundations.jpeg" alt="">
+            </div>
+            <div class="name_and_message">
+              <span style="font-weight: 600;">name</span>
+              <div class="message_preview">
+                <p>Hello there how have you been</p>
+              </div>
+          </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
